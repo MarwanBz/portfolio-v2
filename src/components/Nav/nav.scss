@@ -1,0 +1,133 @@
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li a {
+  padding: 15px;
+  font-size: 14px;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul li a::after {
+  content: '';
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.nav ul li a:hover {
+  color: darkblue;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul li a:hover:not(.contact):after {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul li a.contact {
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul li a.contact:hover {
+  background-color: blue;
+  color: #ce0404;
+}
+
+li.active::before {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color:white;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* !mobile burger */
+.nav .burger div {
+  width: 30px;
+  height: 3px;
+  background-color: blue;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav .burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+  .container .nav {
+    overflow-x: hidden;
+  }
+
+  .container .nav .nav-links .open {
+    opacity: 1;
+  }
+  .container .nav .nav-links .close {
+    opacity: 0;
+  }
+
+   .container .nav ul.nav-links {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 85px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.466);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .container .nav ul.nav-links a {
+    color: red;
+  }
+
+  .container .nav ul.nav-active {
+    transform: translateX(0%);
+  }
+
+  .container .nav .burger {
+    display: block;
+  }
+
+   .line1 {
+    transform: rotate(-45deg) translate(-6px, 5px);
+  }
+
+ .line2 {
+    opacity: 0;
+  }
+
+   .line3 {
+    transform: rotate(45deg) translate(-6px, -5px);
+  }
+}
