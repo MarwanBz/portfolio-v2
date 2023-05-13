@@ -1,12 +1,12 @@
-import "./assets/styles/global.css"
+import "./assets/styles/global.scss"
+
 import Header from './components/Header/index'
+
 function App() {
 
   return (
     <div className="App">
-      <div>
         <Header/>
-      </div>
     </div>
   )
 }

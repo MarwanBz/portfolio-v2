@@ -1,11 +1,11 @@
 
-:root {
-  --primary-dark: #95BAE7;
-  --primary-light: #b0d0f7;
-  --secondary-dark: #585858;
-  --secondary-light: #8a8a8a;
-  --section-padding: 100px 0;
-}
+// variables
+$primary-color: #95BAE7;
+$primary-light: #b0d0f7;
+$secondary-color: #585858;
+$secondary-light: #8a8a8a;
+$section-padding: 100px 0;
+
 
 html {
   scroll-behavior: smooth;

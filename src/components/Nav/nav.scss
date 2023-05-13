@@ -1,81 +1,81 @@
-.nav ul {
-  display: flex;
+@import "../../assets/styles/global.scss";
+
+.nav {
+  ul {
+    display: flex;
+
+    li {
+      position: relative;
+
+      a {
+        padding: 15px;
+        font-size: 14px;
+        color: $secondary-color;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+          content: "";
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+
+        &:hover {
+          color: $primary-color;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover:not(.contact)::after {
+          content: "";
+          height: 3px;
+          width: 100%;
+          background-color: $primary-light;
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          opacity: 1;
+          transform: translateX(0px);
+          transition: all 0.3s ease-in-out;
+        }
+
+        &.contact {
+          border: 1px solid $primary-light;
+          padding: 10px 20px;
+          border-radius: 20px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $primary-color;
+            color: white;
+          }
+        }
+      }
+    }
+
+    li.active::before {
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .burger {
+    div {
+      width: 30px;
+      height: 3px;
+      background-color: $primary-color;
+      margin: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    display: none;
+    cursor: pointer;
+  }
 }
-
-.nav ul li {
-  position: relative;
-}
-
-.nav ul li a {
-  padding: 15px;
-  font-size: 14px;
-  color: black;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav ul li a::after {
-  content: '';
-  opacity: 0;
-  transform: translateX(-40px);
-}
-
-.nav ul li a:hover {
-  color: darkblue;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav ul li a:hover:not(.contact):after {
-  content: '';
-  height: 3px;
-  width: 100%;
-  background-color: green;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  opacity: 1;
-  transform: translateX(0px);
-  transition: all 0.3s ease-in-out;
-}
-
-.nav ul li a.contact {
-  border: 1px solid black;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav ul li a.contact:hover {
-  background-color: blue;
-  color: #ce0404;
-}
-
-li.active::before {
-  content: '';
-  height: 3px;
-  width: 100%;
-  background-color:white;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-/* !mobile burger */
-.nav .burger div {
-  width: 30px;
-  height: 3px;
-  background-color: blue;
-  margin: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav .burger {
-  display: none;
-  cursor: pointer;
-}
-
-/* media queries */
-
 @media (max-width: 600px) {
   .container .nav {
     overflow-x: hidden;
@@ -88,7 +88,7 @@ li.active::before {
     opacity: 0;
   }
 
-   .container .nav ul.nav-links {
+  .container .nav .nav-links {
     display: none;
     position: absolute;
     right: 0;
@@ -107,10 +107,6 @@ li.active::before {
     transition: all 0.5s ease-in-out;
   }
 
-  .container .nav ul.nav-links a {
-    color: red;
-  }
-
   .container .nav ul.nav-active {
     transform: translateX(0%);
   }
@@ -119,15 +115,15 @@ li.active::before {
     display: block;
   }
 
-   .line1 {
+  .line1 {
     transform: rotate(-45deg) translate(-6px, 5px);
   }
 
- .line2 {
+  .line2 {
     opacity: 0;
   }
 
-   .line3 {
+  .line3 {
     transform: rotate(45deg) translate(-6px, -5px);
   }
 }
