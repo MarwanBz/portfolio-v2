@@ -1,47 +1,28 @@
 import "./nav.scss";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function Nav() {
-  const [navSlide, setNavSlide] = useState(false)
-  const navLinkss = [
+  const [navOpen, setNavOpen] = useState(false);
+
+  const navLinks = [
     { name: "Home", href: "#home", className: "home active" },
     { name: "About", href: "#services", className: "services" },
     { name: "Portfolio", href: "#portfolio", className: "portfolio" },
     { name: "Contact", href: "#contact", className: "contact" },
   ];
-    const NavRef= useRef()
-    const navLinks= useRef()
-    
-    function handleNav() {
-      
-        setNavSlide(!navSlide)
-      console.log(navSlide);
-      // burger.classList.toggle("toggle");
-      // navLinks.map((link,index)=>{
-        //   console.log(link,index)
-        // })
-        // links animation fade
-        // navLinks.forEach((link, index) => {
-          //   if (link.style.animation) {
-            //     link.style.animation = "";
-            //   } else {
-              //     link.style.animation = `navLinkFade 0.5s ease forwards ${
-                //       index / 7 + 0.5
-                //     }s`;
-  //   }
-  // })
-  console.log("mmm");
-}
+  function handleNav() {
+    setNavOpen(!navOpen);
+  }
 
   return (
     <div>
       <nav className="nav">
-        <ul className={`nav-links ${navSlide ? "nav-active" : ""}`}>
-          {navLinkss.map((link) => (
+        <ul className={`nav-links ${navOpen ? "nav-active" : ""}`}>
+          {navLinks.map((link) => (
             <li
               key={link.name}
-              className={`${link.className} ${navSlide ? "open" : "close"}`}
+              className={`${link.className} ${navOpen ? "open" : "close"}`}
             >
               <a className={link.className} href={link.href}>
                 {link.name}
@@ -49,10 +30,10 @@ function Nav() {
             </li>
           ))}
         </ul>
-        <div className="burger" onClick={handleNav} ref={NavRef}>
-          <div className={navSlide ? "line1" : ""}></div>
-          <div className={navSlide ? "line2" : ""}></div>
-          <div className={navSlide ? "line3" : ""}></div>
+        <div className="burger" onClick={handleNav}>
+          <div className={navOpen ? "line1" : ""}></div>
+          <div className={navOpen ? "line2" : ""}></div>
+          <div className={navOpen ? "line3" : ""}></div>
         </div>
       </nav>
     </div>
@@ -60,19 +41,3 @@ function Nav() {
 }
 
 export default Nav;
-
-// burger.addEventListener("click", () => {
-//   nav.classList.toggle("nav-active");
-
-  // burger.classList.toggle("toggle");
-  // // links animation fade
-  // navLinks.forEach((link, index) => {
-  //   if (link.style.animation) {
-  //     link.style.animation = "";
-  //   } else {
-  //     link.style.animation = `navLinkFade 0.5s ease forwards ${
-  //       index / 7 + 0.5
-  //     }s`;
-  //   }
-//   });
-// });
