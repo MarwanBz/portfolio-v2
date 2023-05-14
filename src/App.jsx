@@ -1,16 +1,21 @@
-import "./assets/styles/global.scss"
+import "./assets/styles/global.scss";
 
-import Header from './components/Header/index'
-import LandingPage from "./components/LandingPage"
+import Header from "./components/Header/index";
+import LandingPage from "./components/LandingPage";
 
 function App() {
-
   return (
     <div className="App">
-        <Header/>
-        <LandingPage />
+      <Header />
+      <LandingPage
+        title="I create beautiful websites"
+        desc="Hello, I’m Marwan a freelancer front-end developer
+          I build and design websites"
+        ctaText="Need a website"
+        workText="My work"
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
