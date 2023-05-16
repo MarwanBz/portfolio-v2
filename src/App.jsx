@@ -11,7 +11,7 @@ function App() {
         title="I create beautiful websites"
         desc="Hello, I’m Marwan a freelancer front-end developer
           I build and design websites"
-        ctaText="Need a website"
+        ctaText="Download My Resume"
         workText="My work"
       />
     </div>

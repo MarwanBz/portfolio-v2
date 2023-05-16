@@ -54,6 +54,11 @@ p {
   body {
     overflow-x: hidden;
   }
+   header {
+    position: fixed !important;
+    top: 0;
+    z-index: 99999999999;
+  }
 
   header .container {
     flex-direction: column;
@@ -64,7 +69,6 @@ p {
 @media (min-width: 992px) {
   .container {
     width: 970px;
-    /* overflow-x: hidden; */
   }
 }
 
@@ -72,7 +76,6 @@ p {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-    /* overflow-x: hidden; */
   }
 
 }
@@ -83,11 +86,10 @@ p {
   }
 
   header {
+    position: fixed;
+    top: 0;
     padding: 0;
-  }
-
-  header.sticky {
-    padding: 5px 0px;
+    z-index: 99999999999;
   }
 
   /* all H3 */
