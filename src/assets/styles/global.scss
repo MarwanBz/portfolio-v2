@@ -105,4 +105,39 @@ p {
     font-size: 20px;
   }
 
+  // landing media
+  section .landing .container {
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+ section .landing .container .landing-right {
+    width: 100%;
+  }
+
+ section .landing .container .landing-right .svg {
+    height: 50vh;
+    width: 100vw;
+  }
+
+ section .landing .container .landing-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+ section .landing .container .landing-left .btn-landing {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+
+  /* !end of landing */
 }
