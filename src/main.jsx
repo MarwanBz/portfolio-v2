@@ -1,10 +1,9 @@
+import App from './App'
+import Maintenance from './components/UnderBuilding/index'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const isUnderMaintenance = true
+ReactDOM.createRoot(document.getElementById("root")).render(
+    isUnderMaintenance ? <Maintenance /> : <App />
+);
