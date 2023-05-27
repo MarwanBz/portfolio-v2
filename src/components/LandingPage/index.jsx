@@ -1,4 +1,4 @@
-import './LandingPage.scss'
+import "./LandingPage.scss";
 
 function LandingPage(props) {
   return (
@@ -7,10 +7,7 @@ function LandingPage(props) {
         <div className="container">
           <div className="landing-left">
             <h1>{props.title}</h1>
-            <p>
-              {" "}
-              {props.desc}
-            </p>
+            <p> {props.desc}</p>
             <div className="btn-landing">
               <a href="#contact" className="primary-btn">
                 {props.ctaText}

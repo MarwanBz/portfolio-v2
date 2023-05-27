@@ -1,17 +1,14 @@
-
 // variables
-$primary-color: #95BAE7;
+$primary-color: #95bae7;
 $primary-light: #b0d0f7;
 $secondary-color: #585858;
 $secondary-light: #8a8a8a;
 $section-padding: 100px 0;
 
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
+$screen-sm: 600px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
 *,
 *::before,
 *::after {
@@ -25,13 +22,12 @@ html {
   text-decoration: none;
 }
 
-
 body {
   font-family: Arial;
 }
 
 p {
-  color: var(--secondary-dark);
+  color: $secondary-color;
 }
 
 .container {
@@ -43,18 +39,16 @@ p {
 /* ?media queries */
 /* Small */
 @media (min-width: 768px) {
-
   .container {
     width: 750px;
   }
 }
 
-@media (max-width: 767px) {
-
+@media (max-width: $screen-md) {
   body {
     overflow-x: hidden;
   }
-   header {
+  header {
     position: fixed !important;
     top: 0;
     z-index: 99999999999;
@@ -63,6 +57,15 @@ p {
   header .container {
     flex-direction: column;
     min-height: 90px;
+  }
+
+  .btn-landing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -73,14 +76,13 @@ p {
 }
 
 /* Large */
-@media (min-width: 1200px) {
+@media (min-width: $screen-xl) {
   .container {
     width: 1170px;
   }
-
 }
 
-@media (max-width: 600px) {
+@media (max-width: $screen-sm) {
   body {
     font-size: 13px;
   }
@@ -112,16 +114,23 @@ p {
     justify-content: space-evenly;
   }
 
- section .landing .container .landing-right {
+  .landing .container .landing-left {
+    margin-top: 50px;
+  }
+  .landing .container .landing-left h1 {
+    font-size: 20px !important;
+  }
+
+  section .landing .container .landing-right {
     width: 100%;
   }
 
- section .landing .container .landing-right .svg {
+  section .landing .container .landing-right .svg {
     height: 50vh;
     width: 100vw;
   }
 
- section .landing .container .landing-left {
+  section .landing .container .landing-left {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -130,14 +139,13 @@ p {
     justify-content: center;
   }
 
- section .landing .container .landing-left .btn-landing {
+  section .landing .container .landing-left .btn-landing {
     display: flex;
     width: 100%;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
   }
-
 
   /* !end of landing */
 }
