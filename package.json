@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b test"
+    "deploy": "gh-pages -d dist -b maintenance"
   },
   "dependencies": {
     "gsap": "^3.11.5",
