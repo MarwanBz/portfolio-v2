@@ -1,0 +1,101 @@
+@import '../../assets/styles/global.scss';
+
+.landing {
+  width: 100vw;
+  // background-image: url(../../assets/images/landing.svg);
+  /* max-height: calc(100vh - 82px); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.landing .container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.landing .container .landing-left {
+  width: 50%;
+}
+
+.landing .container .landing-left h1 {
+  color: $secondary-color;
+  font-size: 70px;
+  font-family: "Calisto MT";
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.landing .container .landing-left p {
+  color: $secondary-color;
+  line-height: 1.7;
+  width: 60%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.primary-btn {
+  color: #fff;
+  background-color: $primary-color;
+  outline: none;
+  border: 0;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 12px $primary-color;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.primary-btn:hover {
+  transform: scale(.98);
+}
+
+.primary-btn:active {
+  box-shadow: none;
+  transform: scale(0.91);
+}
+
+.secondary-btn {
+  color: #fff;
+  background-color: $secondary-color;
+  outline: none;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+.secondary-btn:hover {
+  transform: scale(0.98);
+}
+
+.secondary-btn:active {
+  box-shadow: none;
+  transform: scale(0.91);
+}
+
+.landing .container .landing-right .svg {
+  background-image: url(../../assets/images/web-development-bw.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 710px;
+}
+
+.landing .container .landing-right {
+  width: 50%;
+}
+
+/* *end of landing */

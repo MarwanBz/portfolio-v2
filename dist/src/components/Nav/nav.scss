@@ -1,0 +1,129 @@
+@import "../../assets/styles/global.scss";
+
+.nav {
+  ul {
+    display: flex;
+
+    li {
+      position: relative;
+
+      a {
+        padding: 15px;
+        font-size: 14px;
+        color: $secondary-color;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+          content: "";
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+
+        &:hover {
+          color: $primary-color;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover:not(.contact)::after {
+          content: "";
+          height: 3px;
+          width: 100%;
+          background-color: $primary-light;
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          opacity: 1;
+          transform: translateX(0px);
+          transition: all 0.3s ease-in-out;
+        }
+
+        &.contact {
+          border: 1px solid $primary-light;
+          padding: 10px 20px;
+          border-radius: 20px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $primary-color;
+            color: white;
+          }
+        }
+      }
+    }
+
+    li.active::before {
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .burger {
+    div {
+      width: 30px;
+      height: 3px;
+      background-color: $primary-color;
+      margin: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    display: none;
+    cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  .container .nav {
+    overflow-x: hidden;
+  }
+
+  .container .nav .nav-links .open {
+    opacity: 1;
+  }
+  .container .nav .nav-links .close {
+    opacity: 0;
+  }
+
+  .container .nav .nav-links {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 85px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.466);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .container .nav ul.nav-active {
+    transform: translateX(0%);
+  }
+
+  .container .nav .burger {
+    display: block;
+  }
+
+  .line1 {
+    transform: rotate(-45deg) translate(-6px, 5px);
+  }
+
+  .line2 {
+    opacity: 0;
+  }
+
+  .line3 {
+    transform: rotate(45deg) translate(-6px, -5px);
+  }
+}
