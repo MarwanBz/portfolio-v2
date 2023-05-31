@@ -31,7 +31,10 @@
 
       .btn-landing {
         a.primary-btn {
-          @include button-styles($primary-dark, 2, 16px, 20px 30px);
+          @include button-styles($primary-dark, 0.97, 16px, 20px 30px);
+        }
+        a.secondary-btn {
+          @include button-styles($secondary-dark, 0.93, 13px, 10px 20px);
         }
       }
     }
@@ -49,51 +52,5 @@
     }
   }
 }
-
-.primary-btn {
-  // @include button-styles($primary-color,0.91 ,16px,20px 30px)
-  // color: #fff;
-  // background-color: $primary-color;
-  // outline: none;
-  // border: 0;
-  // padding: 15px 25px;
-  // border-radius: 30px;
-  // text-align: center;
-  // font-size: 16px;
-  // box-shadow: 0 4px 12px $primary-color;
-  // cursor: pointer;
-  // transition: all 0.3s ease-in-out;
-  // margin-right: 10px;
-}
-
-// .primary-btn:hover {
-//   transform: scale(0.98);
-// }
-
-// .primary-btn:active {
-//   box-shadow: none;
-//   transform: scale(0.91);
-// }
-
-// .secondary-btn {
-//   color: #fff;
-//   background-color: $secondary-color;
-//   outline: none;
-//   border: 0;
-//   padding: 10px 20px;
-//   border-radius: 30px;
-//   cursor: pointer;
-//   transition: all 0.3s ease-in-out;
-//   font-size: 13px;
-// }
-
-// .secondary-btn:hover {
-//   transform: scale(0.98);
-// }
-
-// .secondary-btn:active {
-//   box-shadow: none;
-//   transform: scale(0.91);
-// }
 
 /* *end of landing */

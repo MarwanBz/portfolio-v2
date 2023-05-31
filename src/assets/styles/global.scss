@@ -1,3 +1,4 @@
+@use "sass:math";
 //! variables
 $primary-color: #95bae7;
 $primary-light: #b0d0f7;
@@ -28,16 +29,23 @@ $btn-radius: 30px;
   cursor: pointer;
   text-align: center;
   border: 0;
-
+  display: inline-block;
+  margin-right: 10px;
   &:hover {
-    background-color: $primary-color;
+    @if  $bg-color ==  $primary-dark {
+      background-color: $primary-color;
+    }@else if $bg-color ==  $secondary-dark{
+      background-color: $secondary-color;
+    }
   }
   &:active {
     -webkit-transform: scale($btn-scale);
     transform: scale($btn-scale);
-    background-color: $primary-light;
-    transform: rotate(180deg);
-    // border: 1px solid red;
+    @if $bg-color == $primary-dark {
+      background-color: $primary-light;
+    }@else if $bg-color == $secondary-dark {
+      background-color: $secondary-light;
+    }
   }
 }
 
