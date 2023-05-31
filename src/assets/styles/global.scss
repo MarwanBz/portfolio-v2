@@ -1,14 +1,46 @@
-// variables
+//! variables
 $primary-color: #95bae7;
 $primary-light: #b0d0f7;
+$primary-dark: #4997f5;
 $secondary-color: #585858;
 $secondary-light: #8a8a8a;
+$secondary-dark: #313131;
 $section-padding: 100px 0;
 
 $screen-sm: 600px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
+
+$button-padding: 20px 20px;
+$btn-radius: 30px;
+
+//! mixins
+
+@mixin button-styles($bg-color, $btn-scale, $txt-size, $btn-padding) {
+  color: #fff;
+  background-color: $bg-color;
+  font-size: $txt-size;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  padding: $btn-padding;
+  border-radius: $btn-radius;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+  &:active {
+    -webkit-transform: scale($btn-scale);
+    transform: scale($btn-scale);
+    background-color: $primary-light;
+    transform: rotate(180deg);
+    // border: 1px solid red;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -26,6 +58,9 @@ body {
   font-family: Arial;
 }
 
+body {
+  overflow-x: hidden;
+}
 p {
   color: $secondary-color;
 }
@@ -141,11 +176,9 @@ p {
 
   section .landing .container .landing-left .btn-landing {
     display: flex;
-    width: 100%;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
   }
-
   /* !end of landing */
 }
