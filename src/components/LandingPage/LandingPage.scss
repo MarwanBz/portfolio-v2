@@ -4,7 +4,6 @@
   width: 100vw;
 
   .container {
-    padding: 20px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,8 +46,8 @@
       background-image: url(../../assets/images/web-development-bw.svg);
       background-repeat: no-repeat;
       background-size: cover;
-      height: 600px;
-      width: 710px;
+      height: 500px;
+      width: 610px;
     }
   }
 }
