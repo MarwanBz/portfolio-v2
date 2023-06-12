@@ -1,0 +1,8 @@
+@import '../../assets/styles/global.scss';
+.section-title {
+  @include section-title-styles($secondary-dark) ;
+  @include screen-sm() {
+    font-size: 30px;
+  }
+  
+}

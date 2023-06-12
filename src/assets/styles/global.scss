@@ -31,9 +31,9 @@ $btn-radius: 30px;
   display: inline-block;
   margin-right: 10px;
   &:hover {
-    @if  $bg-color ==  $primary-dark {
+    @if $bg-color == $primary-dark {
       background-color: $primary-color;
-    }@else if $bg-color ==  $secondary-dark{
+    } @else if $bg-color == $secondary-dark {
       background-color: $secondary-color;
     }
   }
@@ -42,9 +42,99 @@ $btn-radius: 30px;
     transform: scale($btn-scale);
     @if $bg-color == $primary-dark {
       background-color: $primary-light;
-    }@else if $bg-color == $secondary-dark {
+    } @else if $bg-color == $secondary-dark {
       background-color: $secondary-light;
     }
+  }
+}
+
+@mixin section-title-styles($color) {
+  padding-bottom: 40px;
+  text-align: center;
+  color: $color;
+  font-size: 70px;
+  font-family: "Calisto MT";
+  font-weight: bold;
+}
+
+@mixin screen-sm {
+  @media only screen and (max-width: $screen-sm) {
+    header {
+      .container {
+        .logo {
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    // landing media
+    // section .landing .container {
+    //   flex-direction: column-reverse;
+    //   height: 100%;
+    //   justify-content: space-evenly;
+    // }
+
+    // .landing .container .landing-left {
+    //   margin-top: 50px;
+    // }
+    // .landing .container .landing-left h1 {
+    //   font-size: 60px !important;
+    //   text-align: center;
+    // }
+
+    // section .landing .container .landing-right {
+    //   width: 100%;
+    // }
+
+    // section .landing .container .landing-right .svg {
+    //   height: 50vh;
+    //   width: 100vw;
+    // }
+
+    // section .landing .container .landing-left {
+    //   width: 100%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   align-content: center;
+    //   justify-content: center;
+    // }
+
+    // section .landing .container .landing-left .btn-landing {
+    //   display: flex;
+    //   align-items: center;
+    //   flex-direction: row;
+    //   justify-content: space-evenly;
+    // }
+    /* !end of landing */
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media only screen and (max-width: $screen-md) {
+    body {
+      overflow-x: hidden;
+    }
+
+    header {
+      .container {
+        flex-direction: column;
+        min-height: 90px;
+      }
+    }
+
+    .btn-landing {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @content;
   }
 }
 
@@ -69,6 +159,7 @@ body {
 }
 p {
   color: $secondary-color;
+  line-height: 1.7;
 }
 
 .container {
@@ -79,31 +170,31 @@ p {
 
 /* ?media queries */
 /* Small */
-@media (min-width: 768px) {
+@media (min-width: $screen-md) {
   .container {
     width: 750px;
   }
 }
 
-@media (max-width: $screen-md) {
-  body {
-    overflow-x: hidden;
-  }
- 
-  header .container {
-    flex-direction: column;
-    min-height: 90px;
-  }
+// @media (max-width: $screen-md) {
+//   body {
+//     overflow-x: hidden;
+//   }
 
-  .btn-landing {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+//   header .container {
+//     flex-direction: column;
+//     min-height: 90px;
+//   }
+
+//   .btn-landing {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     gap: 10px;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
+// }
 
 @media (min-width: 992px) {
   .container {
@@ -118,69 +209,69 @@ p {
   }
 }
 
-@media (max-width: $screen-sm) {
-  body {
-    font-size: 13px;
-  }
+// @media (max-width: $screen-sm) {
+//   // body {
+//   //   font-size: 13px;
+//   // }
 
-  header {
-    position: fixed;
-    top: 0;
-    padding: 0;
-    z-index: 99999999999;
-  }
+//   // header {
+//   //   position: fixed;
+//   //   top: 0;
+//   //   padding: 0;
+//   //   z-index: 99999999999;
+//   // }
 
-  /* all H3 */
-  h3 {
-    font-size: 16px;
-  }
+//   // /* all H3 */
+//   // h3 {
+//   //   font-size: 16px;
+//   // }
 
-  header .container {
-    flex-direction: row;
-  }
+//   // header .container {
+//   //   flex-direction: row;
+//   // }
 
-  header .container .logo a {
-    font-size: 20px;
-  }
+//   // header .container .logo a {
+//   //   font-size: 20px;
+//   // }
 
-  // landing media
-  section .landing .container {
-    flex-direction: column-reverse;
-    height: 100%;
-    justify-content: space-evenly;
-  }
+//   // // landing media
+//   // section .landing .container {
+//   //   flex-direction: column-reverse;
+//   //   height: 100%;
+//   //   justify-content: space-evenly;
+//   // }
 
-  .landing .container .landing-left {
-    margin-top: 50px;
-  }
-  .landing .container .landing-left h1 {
-    font-size: 30px !important;
-    text-align: center;
-  }
+//   // .landing .container .landing-left {
+//   //   margin-top: 50px;
+//   // }
+//   // .landing .container .landing-left h1 {
+//   //   font-size: 30px !important;
+//   //   text-align: center;
+//   // }
 
-  section .landing .container .landing-right {
-    width: 100%;
-  }
+//   // section .landing .container .landing-right {
+//   //   width: 100%;
+//   // }
 
-  section .landing .container .landing-right .svg {
-    height: 50vh;
-    width: 100vw;
-  }
+//   // section .landing .container .landing-right .svg {
+//   //   height: 50vh;
+//   //   width: 100vw;
+//   // }
 
-  section .landing .container .landing-left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-  }
+//   // section .landing .container .landing-left {
+//   //   width: 100%;
+//   //   display: flex;
+//   //   flex-direction: column;
+//   //   align-items: center;
+//   //   align-content: center;
+//   //   justify-content: center;
+//   // }
 
-  section .landing .container .landing-left .btn-landing {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  /* !end of landing */
-}
+//   // section .landing .container .landing-left .btn-landing {
+//   //   display: flex;
+//   //   align-items: center;
+//   //   flex-direction: row;
+//   //   justify-content: space-evenly;
+//   // }
+//   // /* !end of landing */
+// }
