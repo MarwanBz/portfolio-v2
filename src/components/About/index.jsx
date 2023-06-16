@@ -6,11 +6,21 @@ import { useEffect } from "react";
 import { useRef } from "react";
 
 function About(props) {
-  console.log(props);
+  // ! svg circle length = 1040.5220947265625
   useEffect(() => {
-    console.log("useEffect ran");
+    const svg = document.getElementById("img-circle");
+    const l = svg.getTotalLength();
+    console.log(l);
+    
+    
   });
-  console.log("outside useEffect");
+
+  const path = gsap.fromTo(
+    "#img-circle",
+    { x: 0 },
+    { x: 450, delay: 3, repeat: 5 }
+  );
+  console.log(path);
   return (
     <section id="about">
       <div className="container">
@@ -29,7 +39,7 @@ function About(props) {
             <img src="/src/assets/images/marwan.png" alt="" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               width="380.031"
               height="416.003"
               viewBox="0 0 380.031 416.003"
@@ -43,8 +53,8 @@ function About(props) {
                   y2="0.348"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#55c8c4" stop-opacity="0" />
-                  <stop offset="1" stop-color="#72b4bd" stop-opacity="0" />
+                  <stop offset="0" stopColor="#55c8c4" stopOpacity="0" />
+                  <stop offset="1" stopColor="#72b4bd" stopOpacity="0" />
                 </linearGradient>
               </defs>
               <path
