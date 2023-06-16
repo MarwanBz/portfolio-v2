@@ -54,7 +54,13 @@
         a.secondary-btn {
           @include button-styles($secondary-dark, 0.93, 13px, 10px 20px);
         }
-
+        @include screen-md() {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          align-items: center;
+        }
+        
         @include screen-sm() {
           display: flex;
           align-items: center;
@@ -63,6 +69,8 @@
           flex-wrap: wrap;
           row-gap: 10px;
         }
+
+        
       }
     }
 
