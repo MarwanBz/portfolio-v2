@@ -15,12 +15,12 @@ function About(props) {
     
   });
 
-  const path = gsap.fromTo(
-    "#img-circle",
-    { x: 0 },
-    { x: 450, delay: 3, repeat: 5 }
-  );
-  console.log(path);
+  // const path = gsap.fromTo(
+  //   "#img-circle",
+  //   { x: 0 },
+  //   { x: 450, delay: 3, repeat: 5 }
+  // );
+  // console.log(path);
   return (
     <section id="about">
       <div className="container">

@@ -33,7 +33,7 @@ section#about {
       
       .about-img {
         position: relative;
-
+        // order: -1;
         @include screen-sm() {
           order: -1;
         }

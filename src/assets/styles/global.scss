@@ -137,6 +137,18 @@ $btn-radius: 30px;
     @content;
   }
 }
+// @mixin screen-lg {
+//   @media only screen and (max-width: $screen-lg) {
+//     #about {
+//       .container {
+//         .about-me {
+//           background-color: red;
+//         }
+//       }
+//     }
+//     @content;
+//   }
+// }
 
 *,
 *::before,
@@ -174,6 +186,14 @@ p {
   .container {
     width: 750px;
   }
+
+  #about {
+    .container {
+      .about-img {
+        order: -1;
+      }
+    }
+  }
 }
 
 // @media (max-width: $screen-md) {
@@ -200,6 +220,11 @@ p {
   .container {
     width: 970px;
   }
+}
+@media (max-width: $screen-lg) {
+  .about-description {
+        width: 100% !important;
+      }
 }
 
 /* Large */
