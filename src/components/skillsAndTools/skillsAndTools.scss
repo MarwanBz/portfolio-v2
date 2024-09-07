@@ -23,6 +23,11 @@ section {
   position: relative;
 }
 
+.tools-container .section-title{
+  color: white;
+  padding-top: 40px;
+}
+
 .tools-container::before {
   content: "";
   display: block;
