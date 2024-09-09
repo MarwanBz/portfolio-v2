@@ -28,7 +28,8 @@ section {
       color: white;
       padding-top: 40px;
     }
-    p {
+    .section-title + p {
+      text-align: center;
       color: white;
     }
 

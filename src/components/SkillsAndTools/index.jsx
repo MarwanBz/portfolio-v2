@@ -1,5 +1,6 @@
 import "./skillsAndTools.scss"
 
+import SkillsCard from "../SkillsCard";
 import Title from "../sectionTitle";
 
 function SkillsAndTools() {
@@ -12,6 +13,7 @@ function SkillsAndTools() {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere commodi dignissimos .</p>
         </div>
       </div>
+      <SkillsCard />
     </section>
   )
 }
