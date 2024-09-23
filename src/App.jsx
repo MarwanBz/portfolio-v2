@@ -3,6 +3,7 @@ import "./assets/styles/global.scss";
 import About from "./components/About";
 import Header from "./components/Header/index";
 import LandingPage from "./components/LandingPage";
+import Portfolio from "./components/Portfolio";
 import SkillsAndTools from "./components/SkillsAndTools/index";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         aboutCta="Drop Me an Email"
       />
       <SkillsAndTools />
+      <Portfolio />
     </div>
   );
 }
