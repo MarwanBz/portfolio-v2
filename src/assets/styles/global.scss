@@ -223,14 +223,24 @@ p {
 }
 @media (max-width: $screen-lg) {
   .about-description {
-        width: 100% !important;
-      }
+    width: 100% !important;
+  }
 }
 
 /* Large */
 @media (min-width: $screen-xl) {
   .container {
     width: 1170px;
+  }
+}
+
+@media (max-width: $screen-xl) {
+  .conatiner {
+    .cards-container {
+      .card-container {
+        background-color: #585858;
+      }
+    }
   }
 }
 

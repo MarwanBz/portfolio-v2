@@ -3,7 +3,7 @@ import "./assets/styles/global.scss";
 import About from "./components/About";
 import Header from "./components/Header/index";
 import LandingPage from "./components/LandingPage";
-import SkillsAndTools from "./components/skillsAndTools/index";
+import SkillsAndTools from "./components/SkillsAndTools/index";
 
 function App() {
   return (
