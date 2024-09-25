@@ -10,31 +10,32 @@ const settings = {
 //Home Page
 const greeting = {
   title: "Hello 👋.",
-  title2: "Harikrushn",
-  logo_name: "harry.k()",
+  title2: "Marwan",
+  logo_name: "Marwan.Baz()",
   nickname: "harry / picleric",
   full_name: "Harikrushn Kanani",
-  subTitle: "Backend Developer, Open Source Enthusiast 🔥. Always learning.",
+  subTitle:
+    "Web Developer | Ui Designer, Open Source Enthusiast 🔥. Always learning.",
   resumeLink:
-    "https://drive.google.com/file/d/1Ty0-51DZ72PE30kfJ2p1jjw9SHYCnDAi/view?usp=sharing",
-  mail: "mailto:hkanani191@gmail.com",
+    "https://drive.google.com/file/d/1W9ABkBkLvueQBxdzzvl8YAvBTVKCXhjt/view?usp=sharing",
+  mail: "mailto:marouane.bazghifan@gmail.com",
 };
 
 const socialMediaLinks = {
   /* Your Social Media Link */
-  github: "https://github.com/harikanani",
-  linkedin: "https://www.linkedin.com/in/harikrushn-kanani/",
-  gmail: "hkanani191@gmail.com",
-  gitlab: "https://gitlab.com/harikanani",
+  github: "https://github.com/marwanbz",
+  linkedin: "https://www.linkedin.com/in/marwanbz/",
+  gmail: "marouane.bazghifan@gmail.com",
+  gitlab: "https://gitlab.com/marwanbz",
   // facebook: "https://www.facebook.com/harikrishan.kanani/",
-  twitter: "https://twitter.com/Harikrushn9",
-  instagram: "https://www.instagram.com/hari_kanani_/",
+  twitter: "https://twitter.com/",
+  instagram: "https://www.instagram.com/marwan_dev_",
 };
 
 const skills = {
   data: [
     {
-      title: "Backend Development",
+      title: "Web Development",
       fileName: "FullStackImg",
       skills: [
         "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
@@ -557,7 +558,7 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "harikrushn.jpg",
+    profile_image_path: "marwan.png",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
@@ -565,7 +566,7 @@ const contactPageData = {
     title: "Blogs",
     subtitle:
       "I don't blog frequently but when I do something awesome, I do try to document it so it can be helpful to others. I write on Twitter.",
-    link: "https://twitter.com/Harikrushn9",
+    link: "https://twitter.com/",
     avatar_image_path: "blogs_image.svg",
   },
 };
