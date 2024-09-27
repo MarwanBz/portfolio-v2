@@ -76,26 +76,37 @@ const skills = {
           },
         },
         {
+          skillName: "NextJS",
+          fontAwesomeClassname: "logos:nextjs-icon",
+        },
+        {
+          skillName: "TailwindCss",
+          fontAwesomeClassname: "devicon:tailwindcss",
+          style: {
+            color: "#29B0EE",
+          },
+        },
+        {
+          skillName: "React-native Expo",
+          fontAwesomeClassname: "simple-icons:expo",
+          style: {
+            color: "#000000",
+          },
+        },
+        {
           skillName: "NodeJS",
-          fontAwesomeClassname: "simple-icons:nodejs-wordmark",
+          fontAwesomeClassname: "simple-icons:nodedotjs",
           style: {
-            color: "#339933",
+            color: "#439713",
           },
         },
-        {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#439743",
-          },
-        },
+        // {
+        //   skillName: "MongoDB",
+        //   fontAwesomeClassname: "simple-icons:mongodb",
+        //   style: {
+        //     color: "#439743",
+        //   },
+        // },
         // {
         //   skillName: "GraphQL",
         //   fontAwesomeClassname: "simple-icons:graphql",
@@ -104,26 +115,19 @@ const skills = {
         //   },
         // },
         {
-          skillName: "Android",
-          fontAwesomeClassname: "simple-icons:android",
+          skillName: "Supabase",
+          fontAwesomeClassname: "logos:supabase-icon",
           style: {
             color: "#3DDC84",
           },
         },
-        // {
-        //   skillName: "Java",
-        //   fontAwesomeClassname: "simple-icons:java",
-        //   style: {
-        //     color: "#f89820",
-        //   },
-        // },
-        // {
-        //   skillName: "Flutter",
-        //   fontAwesomeClassname: "simple-icons:flutter",
-        //   style: {
-        //     color: "#02569B",
-        //   },
-        // },
+        {
+          skillName: "Firebase",
+          fontAwesomeClassname: "logos:firebase",
+          style: {
+            color: "#f89820",
+          },
+        },
         // {
         //   skillName: "Dart",
         //   fontAwesomeClassname: "simple-icons:dart",
@@ -166,13 +170,13 @@ const skills = {
         //     color: "#CA1A22",
         //   },
         // },
-        {
-          skillName: "Git",
-          fontAwesomeClassname: "simple-icons:git",
-          style: {
-            color: "#E94E32",
-          },
-        },
+        // {
+        //   skillName: "Git",
+        //   fontAwesomeClassname: "simple-icons:git",
+        //   style: {
+        //     color: "#E94E32",
+        //   },
+        // },
         // {
         //   skillName: "C",
         //   fontAwesomeClassname: "simple-icons:c",
