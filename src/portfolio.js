@@ -12,10 +12,10 @@ const greeting = {
   title: "Hello 👋.",
   title2: "Marwan",
   logo_name: "Marwan.Baz()",
-  nickname: "harry / picleric",
-  full_name: "Harikrushn Kanani",
+  nickname: "baz",
+  full_name: "Marwan Bazighifan",
   subTitle:
-    "Web Developer | Ui Designer, Open Source Enthusiast 🔥. Always learning.",
+    "Web Developer | Ui Designer, Open Source Contributor and Volunteer. Always Exploring, Trying, Learning, Experiencing.",
   resumeLink:
     "https://drive.google.com/file/d/1W9ABkBkLvueQBxdzzvl8YAvBTVKCXhjt/view?usp=sharing",
   mail: "mailto:marouane.bazghifan@gmail.com",
@@ -39,10 +39,10 @@ const skills = {
       fileName: "FullStackImg",
       skills: [
         "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
-        "⚡ Building responsive website front end using ReactJS",
-        "⚡ Developing mobile applications using Flutter and Android",
-        "⚡ Creating application backend in Node, Express & Flask",
-        "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean",
+        "⚡ Building responsive website front end using ReactJS / NextJS",
+        "⚡ Developing mobile applications using React Native Expo",
+        "⚡ Learning to develop backend application in Node and Express",
+        "⚡ Integration of third party services such as Firebase and Supabase",
       ],
       softwareSkills: [
         {
@@ -68,11 +68,11 @@ const skills = {
           },
         },
         {
-          skillName: "PHP",
-          fontAwesomeClassname: "simple-icons:php",
-          style: {
-            color: "#7377AD",
-          },
+          // skillName: "PHP",
+          // fontAwesomeClassname: "simple-icons:php",
+          // style: {
+          //   color: "#7377AD",
+          // },
         },
         {
           skillName: "ReactJS",
@@ -558,7 +558,7 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "marwan.png",
+    profile_image_path: "marwan_img.png",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
